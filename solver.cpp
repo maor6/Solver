@@ -84,6 +84,11 @@ namespace solver{
         return q;
     }
 
+    RealVariable& operator ==(double a, RealVariable x){
+        RealVariable q;
+        return q;
+    }
+
     //----------------------varible and complex-----------------
     ComplexVariable& ComplexVariable::operator +(const std::complex<double> y){ // x+a
         ComplexVariable a;
@@ -198,9 +203,44 @@ namespace solver{
         return q;
     }
 
-     double solve(RealVariable){
-         return 0;
-     }
+    ComplexVariable& operator ==(double a, const ComplexVariable y){
+        ComplexVariable q;
+        return q;
+    }
+
+    ComplexVariable& operator +(const std::complex<double> y ,const ComplexVariable a){
+        ComplexVariable q;
+        return q;
+    }
+
+    ComplexVariable& operator -(const std::complex<double> y ,const ComplexVariable a){
+        ComplexVariable q;
+        return q;
+    }
+
+    ComplexVariable& operator *(const std::complex<double> y ,const ComplexVariable a){
+        ComplexVariable q;
+        return q;
+    }
+
+    ComplexVariable& operator /(const std::complex<double> y ,const ComplexVariable a){
+        ComplexVariable q;
+        return q;
+    }
+
+    ComplexVariable& operator ^(const std::complex<double> y ,const ComplexVariable a){
+        ComplexVariable q;
+        return q;
+    }
+
+    ComplexVariable& operator ==(const std::complex<double> y ,const ComplexVariable a){
+        ComplexVariable q;
+        return q;
+    }
+
+    double solve(RealVariable){
+        return 0;
+    }
      
     std::complex<double> solve(ComplexVariable){
         std::complex<double> x;

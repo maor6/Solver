@@ -33,6 +33,7 @@ class RealVariable{
     friend RealVariable& operator -(double a, RealVariable x); // a-x
     friend RealVariable& operator *(double a, RealVariable x); // a*x
     friend RealVariable& operator /(double a, RealVariable x); // a/x
+    friend RealVariable& operator ==(double a, RealVariable x); // a==x
 };
 
 
@@ -82,7 +83,16 @@ class ComplexVariable{
     friend ComplexVariable& operator -(double a, const ComplexVariable y); // a-y
     friend ComplexVariable& operator *(double a, const ComplexVariable y); // a*y
     friend ComplexVariable& operator /(double a, const ComplexVariable y); // a/y
+    friend ComplexVariable& operator ==(double a, const ComplexVariable y); // a==y
     //-----------------------------------------------------------------------
+
+    // ----------------------complexand varibale-------------------------
+    friend ComplexVariable& operator +(const std::complex<double> y ,const ComplexVariable a);
+    friend ComplexVariable& operator -(const std::complex<double> y ,const ComplexVariable a); 
+    friend ComplexVariable& operator *(const std::complex<double> y ,const ComplexVariable a);
+    friend ComplexVariable& operator /(const std::complex<double> y ,const ComplexVariable a);
+    friend ComplexVariable& operator ^(const std::complex<double> y ,const ComplexVariable a);
+    friend ComplexVariable& operator ==(const std::complex<double> y ,const ComplexVariable a); 
 
 };
 
