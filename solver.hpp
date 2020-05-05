@@ -50,11 +50,10 @@ class ComplexVariable{
         std::complex<double> b;
         std::complex<double> c;
 
-        ComplexVariable(){
-            a = (0,0);
-            b = (1,1);
-            c = (0,0);
-        }
+        ComplexVariable(): a(0), b(1,0), c(0) {}
+
+
+        
     // ----------------------varibale and complex-------------------------
     ComplexVariable operator +(const std::complex<double> y); // y+a
     ComplexVariable operator -(const std::complex<double> y); //y-a
@@ -74,20 +73,20 @@ class ComplexVariable{
     //------------------------------------------------------------------------
 
     //------------------------------varible and double-----------------
-    ComplexVariable operator +(const double y);
-    ComplexVariable operator -(const double y);
-    ComplexVariable operator *(const double y);
-    ComplexVariable operator /(const double y);
-    ComplexVariable operator ^(const double y);
-    ComplexVariable operator ==(const double y);
+    // ComplexVariable operator +(const double y);
+    // ComplexVariable operator -(const double y);
+    // ComplexVariable operator *(const double y);
+    // ComplexVariable operator /(const double y);
+    // ComplexVariable operator ^(const double y);
+    // ComplexVariable operator ==(const double y);
     //----------------------------------------------------------------------
 
     //--------------------------------double and varible--------------------------------
-    friend ComplexVariable operator +(double a, const ComplexVariable y); // a+y
-    friend ComplexVariable operator -(double a, const ComplexVariable y); // a-y
-    friend ComplexVariable operator *(double a, const ComplexVariable y); // a*y
-    friend ComplexVariable operator /(double a, const ComplexVariable y); // a/y
-    friend ComplexVariable operator ==(double a, const ComplexVariable y); // a==y
+    // friend ComplexVariable operator +(double a, const ComplexVariable y); // a+y
+    // friend ComplexVariable operator -(double a, const ComplexVariable y); // a-y
+    // friend ComplexVariable operator *(double a, const ComplexVariable y); // a*y
+    // friend ComplexVariable operator /(double a, const ComplexVariable y); // a/y
+    // friend ComplexVariable operator ==(double a, const ComplexVariable y); // a==y
     //-----------------------------------------------------------------------
 
     // ----------------------complexand varibale-------------------------
@@ -101,6 +100,7 @@ class ComplexVariable{
 };
 
     double solve(RealVariable);
+    double solveIm(RealVariable x);
     std::complex<double> solve(ComplexVariable);
 
 }
